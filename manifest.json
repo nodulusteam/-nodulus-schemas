@@ -1,0 +1,59 @@
+{
+
+  "files": [
+    "schemas.js",
+    "schemas.html",
+    "schemainput.html",
+    "subform.html",
+    "propertiesdialog.html",
+    "lobby.js",
+    "lobby.html",
+    "item.js",
+    "item.html",
+    "designer.js",
+    "designer.html",
+    "confirmdialog.html",
+    "nav.html",
+    "schematreemenu.html",
+    "schemadialog.html",
+    "decorators/bootstrap/table.html",
+    "decorators/ckeditor/ckeditor.html",
+    "decorators/summernote/summernote.html"
+  ],
+  "scripts": [
+    "papaparse.min.js",
+    "tv4.js",
+    "objectpath.js",
+    "schema-form.js",
+    "bootstrap-decorator.min.js",
+    "schem-form-definitions.js",
+    "angular-schema-form-dynamic-select.js",
+    "bootstrap-ui-ace.min.js",
+    "nav.js"
+    
+  ],
+  "dependencies": [
+    "schemaForm",
+    "nodulus_schemas"
+  ],
+  "navname": "schemas_nav",
+  "routes": [
+    {
+      "route": "/schemas",
+      "path": "schemas.js"
+    }
+  ],
+  "module": {
+    "name": "schemas"
+
+  },
+  "npm": {
+
+  },
+  "navigation": [
+
+  ]
+
+
+
+}
