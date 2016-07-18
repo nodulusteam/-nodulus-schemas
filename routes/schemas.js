@@ -14,8 +14,8 @@ var router = express.Router();
 var util = require('util');
 var fs = require('fs');
 var path = require('path');
-var dal = require("../app/dal.js").dal;
-var api = require("../app/api.js").api;
+var dal = require("@nodulus/data");
+
 
 var moment = require('moment');
 router.get('/collections', function (req, res) {  

@@ -1,8 +1,8 @@
 {
   "name": "@nodulus/schemas",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "",
-  "main": "Language.js",
+  "main": "routes/schemas.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@nodulus/api": "^1.0.0",
-    "@nodulus/data": "^1.0.6"
+    "@nodulus/data": "^1.0.8"
   },
   "devDependencies": {
     "typescript": "^1.8.10"
