@@ -63,9 +63,9 @@
             <tbody infinite-scroll="nextPage()">
                 <tr ng-repeat='row in gridOptions.rowData'>
                     <td ng-repeat='column in gridOptions.columnDefs'>
-                        <span ng-if="column.getter">{{deepFind(row, column)}}{{row[column.field + "_lookup"]}}</span>
-                        <span ng-show="column.filter==='date'">{{row[column.field] | date}}</span>
-                        <span ng-show="!column.getter && column.filter!=='date'">{{row[column.field]}}</span>
+                        <span ng-show="column.getter">{{deepFind(row, column)}}{{row[column.field + "_lookup"]}}</span>
+                        <span ng-if="column.filter && column.filter!=='text'" ng-bind-html="row[column.field] | filterpicker: column.filter"></span>
+                        <span ng-show="!column.getter && column.filter==='text'">{{row[column.field]}}</span>
                     </td>
                     <td>
                         <a class="btn btn-danger btn-sm" ng-click="deleteItem(row)"><i class="glyphicon glyphicon-trash"></i>  {{"Delete" | translate}}</a>
