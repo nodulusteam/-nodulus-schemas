@@ -75,24 +75,23 @@ DynamicData.
                 $scope.modelName = $Cache.schemas[$scope.schemaid].name;
                 dbApi = $resource('/api/' + $scope.modelName);
 
-                $scope.NextPage = function () {
-                    alert("next");
-                }
+
                 $scope.CurrentPage = 1;
-                $scope.PageTo = function (page) {
+                $scope.DataLoading = false;
+                $scope.PageTo = function (page, pageSize, total) {
                     $scope.CurrentPage = page;
-                    $scope.SearchInformation.paging = { page: page, pagesize: 10 };
+                    $scope.SearchInformation.paging = { page: page, pagesize: $scope.SearchInformation.paging.pagesize };
 
                     var searchObj = {
                         "$project": $scope.projection,
-                        "$skip": (($scope.SearchInformation.paging.page - 1) * $scope.SearchInformation.paging.pagesize),
+                        "$skip": ((page - 1) * $scope.pageSize),
                         "$limit": $scope.SearchInformation.paging.pagesize,
                         "$sort": $scope.SearchInformation.sort
                     }
 
                     if ($scope.SearchInformation.search !== undefined && $scope.SearchInformation.search.term !== undefined)
                         searchObj["$search"] = $scope.SearchInformation.search;
-
+                    $scope.DataLoading = true;
                     dbApi.get(
                         searchObj
                         , function (data) {
@@ -106,6 +105,8 @@ DynamicData.
                             for (var i = 0; i < $scope.LobbyPagesCount; i++) {
                                 $scope.LobbyPages.push(i + 1);
                             }
+
+                            $scope.DataLoading = false;
 
                             //var dataSource = new kendo.data.DataSource({
 
