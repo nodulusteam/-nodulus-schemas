@@ -18,3 +18,6 @@ form generator for data entry
  `npm install @nodulus/schemas`
  
   
+ 
+##### Modules setup
+﻿![Alt text](art/schemas.png?raw=true "Schemas")
