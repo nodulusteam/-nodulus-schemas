@@ -9,6 +9,10 @@
   "keywords": [
     "nodulus","cms","data editor","db manager"
   ],
+    "repository": {
+    "type": "git",
+    "url": "https://github.com/nodulusteam/-nodulus-schemas"
+  },
   "author": "nodulus",
   "license": "ISC",
   "dependencies": {
