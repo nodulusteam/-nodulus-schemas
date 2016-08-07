@@ -19,5 +19,11 @@ form generator for data entry
  
   
  
-##### Modules setup
+##### Schema editor
 ﻿![Alt text](art/schemas.png?raw=true "Schemas")
+
+##### Lobby for collection (search, sort, paging, custom fields)
+﻿![Alt text](art/lobby.png?raw=true "Lobby")
+
+##### item page (managed form, validations, sub-forms)
+﻿![Alt text](art/item.png?raw=true "Item")
