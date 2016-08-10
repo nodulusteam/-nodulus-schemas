@@ -229,7 +229,7 @@ DynamicData.controller('SchemaCtrl', ['$scope', '$rootScope', '$mdSidenav', '$ht
 DynamicData.directive("schemaInput", function (RecursionHelper) {
     return {
         restrict: "E",
-        templateUrl: "modules/schemas/schemainput.html",
+        templateUrl: "@nodulus/schemas/schemainput.html",
         scope: {
             parentCollection: "=",
             propertyName: "=",
@@ -303,7 +303,7 @@ DynamicData.directive("schemaInput", function (RecursionHelper) {
                     
                     $mdDialog.show({
                         controller: DialogController,
-                        templateUrl: 'modules/schemas/propertiesdialog.html',
+                        templateUrl: '@nodulus/schemas/propertiesdialog.html',
                         locals: { property: property },
                         parent: angular.element(document.body),
                         

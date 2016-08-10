@@ -1,6 +1,6 @@
 {
   "name": "@nodulus/schemas",
-  "version": "1.0.8",
+  "version": "1.0.12",
   "description": "form and data management for nodulus",
   "main": "routes/schemas.js",
   "scripts": {

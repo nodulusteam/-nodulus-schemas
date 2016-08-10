@@ -24,7 +24,7 @@ angular.module('nodulus_schemas', ['ngMaterial'])
                 
                 showTreeBottomSheet: function ($event, node) {
                     $mdBottomSheet.show({
-                        templateUrl: 'modules/schemas/schematreemenu.html',
+                        templateUrl: '@nodulus/schemas/schematreemenu.html',
                         controller: 'SchemaTreeMenuCtrl',
                         targetEvent: $event
                     }).then(function (clickedItem) {
@@ -35,7 +35,7 @@ angular.module('nodulus_schemas', ['ngMaterial'])
                     var parentEl = angular.element(document.body);
                     $mdDialog.show({
                         parent: parentEl,
-                        templateUrl: 'modules/schemas/schemadialog.html',
+                        templateUrl: '@nodulus/schemas/schemadialog.html',
                         controller: 'SchemaDialog',
                         locals: { "$EditCategory": { ParentId: '00000000-0000-0000-0000-000000000000' }, "$NodeCollection": menu.children },
                         onComplete: function () { }
@@ -56,7 +56,7 @@ angular.module('nodulus_schemas', ['ngMaterial'])
                             Alias: data.items[i].name ,
                             Name: data.items[i].name ,
                             ParentId: "00000000-0000-0000-0000-000000000000",
-                            Url: "/modules/schemas/lobby.html",
+                            Url: "/@nodulus/schemas/lobby.html",
                             _id: data.items[i]._id,
                             label: data.items[i].name
                         });
@@ -86,7 +86,7 @@ angular.module('nodulus_schemas', ['ngMaterial'])
 
 
         },
-        templateUrl: "modules/schemas/nav.html",
+        templateUrl: "@nodulus/schemas/nav.html",
         link: function (scope, element, attrs) {
             
             
@@ -125,7 +125,7 @@ angular.module('nodulus_schemas', ['ngMaterial'])
     }
     
     function EditSchema(item) {
-        var url = 'modules/schemas/schemas.html';
+        var url = '@nodulus/schemas/schemas.html';
         item.node.schemaid = item.node._id;
         item.node.itemKey = "schema_" + item.node._id;
         $IDE.ShowLobby(item.node, url);

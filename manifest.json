@@ -39,12 +39,12 @@
   "navname": "schemas_nav",
   "routes": [
     {
-      "route": "/schemas",
+      "route": "/",
       "path": "schemas.js"
     }
   ],
   "module": {
-    "name": "schemas"
+    "name": "@nodulus/schemas"
 
   },
   "npm": {

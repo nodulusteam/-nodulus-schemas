@@ -278,7 +278,7 @@ DynamicData.
 
 
             var itemId = rowItem._id;
-            var itemUrl = 'modules/schemas/item.html';
+            var itemUrl = '@nodulus/schemas/item.html';
             var item = { _id: itemId, name: itemName, schemaid: $scope.schemaid };
 
             $IDE.ShowLobby(item, itemUrl);
@@ -323,7 +323,7 @@ DynamicData.
 
             var itemId = guid();
             var item = { _id: itemId, name: "New Item", schemaid: $scope.schemaid };
-            var itemUrl = "modules/schemas/item.html";
+            var itemUrl = "@nodulus/schemas/item.html";
 
             $IDE.ShowLobby(item, itemUrl);
         }
