@@ -73,7 +73,7 @@ DynamicData.
                 $scope.columns.push({ headerName: "", templateUrl: "partials/gridTemplates/ViewAndDeleteBtns.html" });
 
                 $scope.modelName = $Cache.schemas[$scope.schemaid].name;
-                dbApi = $resource('/api/' + $scope.modelName);
+                dbApi = $resource('@nodulus/api/' + $scope.modelName);
 
 
                 $scope.CurrentPage = 1;
@@ -287,7 +287,7 @@ DynamicData.
         };
 
         $scope.deleteItem = function (row) {
-            var Api = $resource("/api/" + $Cache.schemas[$scope.schemaid].name);
+            var Api = $resource("@nodulus/api/" + $Cache.schemas[$scope.schemaid].name);
             $scope.message = "<p>Are you sure that you want to delete " + "<strong>" + row.FirstName + " " + row.LastName + "</strong> from the db?</p>";
 
             var modalInstance = $uibModal.open({

@@ -1,15 +1,19 @@
 {
   "name": "@nodulus/schemas",
-  "version": "1.0.12",
+  "version": "1.0.15",
   "description": "form and data management for nodulus",
   "main": "routes/schemas.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "nodulus","cms","data editor","db manager"
+    "nodulus",
+    "cms",
+    "data editor",
+    "db manager",
+    "nodulus-extension"
   ],
-    "repository": {
+  "repository": {
     "type": "git",
     "url": "https://github.com/nodulusteam/-nodulus-schemas"
   },
@@ -19,7 +23,7 @@
     "@nodulus/api": "^1.0.0",
     "@nodulus/data": "^1.0.8"
   },
-   "devDependencies": {
+  "devDependencies": {
     "chai": "^3.5.0",
     "del": "^2.2.1",
     "gulp": "^3.9.1",

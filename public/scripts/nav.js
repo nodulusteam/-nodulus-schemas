@@ -46,7 +46,7 @@ angular.module('nodulus_schemas', ['ngMaterial'])
             
             
             $scope.RefreshMenu = function () { 
-                $scope.schemaTreeResource = $resource(apiUrl + '/schemas/', {$sort: { "name": 1 }});
+                $scope.schemaTreeResource = $resource('@nodulus/api/schemas/', {$sort: { "name": 1 }});
                 
                 $scope.TreeLoading = true;
                 $scope.schemaTreeResource.get({}, function (data) {
@@ -228,7 +228,7 @@ angular.module('nodulus_schemas', ['ngMaterial'])
     
     //var header = { 'token': $User.User.Token, "patientid": $User.User._id };
     
-    var lobbyResource = $resource(apiUrl + '/schemas/', {}, {
+    var lobbyResource = $resource('@nodulus/api/schemas', {}, {
         'get': { method: 'GET' },
         'save': { method: 'POST' },
         'query': { method: 'GET', isArray: true },
@@ -238,7 +238,7 @@ angular.module('nodulus_schemas', ['ngMaterial'])
     
     
     
-    var nameResource = $resource('/schemas/collections', {}, {
+    var nameResource = $resource('@nodulus/schemas/collections', {}, {
         'get': { method: 'GET' },
         'save': { method: 'POST' },
         'query': { method: 'GET', isArray: true },

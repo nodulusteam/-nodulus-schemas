@@ -20,7 +20,7 @@ DynamicData
         var tabschema = $scope.$parent.$parent.schemaid;
         var colName = $Cache["schemas"][tabschema].name;
         var keysArr = $scope.$parent.$parent.itemKey.split("_");
-        $scope.api = $resource("/api/" + colName);
+        $scope.api = $resource("@nodulus/api/" + colName);
         $scope.itemId = keysArr[1];
         $scope.Name = "";
         $Broker.ready(colName, keysArr[1], function (data) {
@@ -80,7 +80,7 @@ DynamicData
 
 
         $scope.fillFromApi = function (formFragment) {
-            var res = $resource("/api/" + formFragment.lookup);
+            var res = $resource("@nodulus/api/" + formFragment.lookup);
             res.get({}, function (data) {
 
                 formFragment.titleMap = [];

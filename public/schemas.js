@@ -11,8 +11,8 @@
 DynamicData.controller('SchemaCtrl', ['$scope', '$rootScope', '$mdSidenav', '$http', '$mdDialog', '$resource', '$mdToast', '$animate', '$Models', '$timeout', '$Cache',
     function ($scope, $rootScope, $mdSidenav, $http, $mdDialog, $resource, $mdToast, $animate, $Models, $timeout, $Cache) {
         
-        var dbApi = $resource('/api/schemas');
-        var noSqlApiDirectives = $resource('/directives');
+        var dbApi = $resource('@nodulus/api/schemas');
+        var noSqlApiDirectives = $resource('@nodulus/schemas/directives');
         $rootScope["allDbs"] = [];
         $scope.editorData = {}
         $scope.Saved = false;
@@ -351,7 +351,7 @@ DynamicData.directive("schemaInput", function (RecursionHelper) {
                     }
                     
                     
-                    var api = $resource('/api/schemas');
+                    var api = $resource('@nodulus/api/schemas');
                     api.get({}, function (data) {
                         $scope.schemas = data.items;
                         
